@@ -1,0 +1,36 @@
+.main-nav {
+  margin-top: 15px;
+  display: block;
+  max-width: 480px;
+  width: 100%;
+}
+
+.main-nav__list {
+  max-width: 480px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 30px;
+}
+
+.main-nav__item {
+  max-width: 225px;
+  width: max-content;
+}
+
+
+.main-nav__link {
+  color: inherit;
+  line-height: 18px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  vertical-align: top;
+}
+
