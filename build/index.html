@@ -13,7 +13,7 @@
     <div class="wrapper">
       <header class="header">
         <div class="container header__inner">
-          <a class="header__logo" href="index.html" aria-label="Ссылка на главную страницу.">
+          <a class="logo header__logo" href="index.html" aria-label="Ссылка на главную страницу.">
             <picture>
               <source media="(max-width: 374px)" srcset="./img/svg/logo-short.svg">
               <img src="./img/svg/logo.svg" width="215" height="55" alt="Smart Device">
@@ -56,15 +56,65 @@
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
             <img src="./img/paper-airplane.png" alt="">
-            <img src="./img/paper-airplane.png" alt="">
-            <img src="./img/paper-airplane.png" alt="">
           </div>
         </section>
         <section id="contact-form">
         </section>
       </main>
       <footer class="footer">
-        <div class="container"></div>
+        <div class="container footer__inner">
+          <div class="footer__contact">
+            <a href="index.html" class="logo footer__logo">
+              <img src="./img/svg/logo.svg" width="215" height="55" alt="Smart Device">
+            </a>
+            <ul class="social footer__social">
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#social-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#social-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="" class="social__link">
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite.svg#social-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__accordion accordion">
+            <div class="accordion__item">
+              <h2 class="accordion__trigger">Разделы сайта</h2>
+              <ul class="accordion__content-list accordion__content-list--site-sections">
+                <li class="accordion__inner-item">О Компании</li>
+                <li class="accordion__inner-item">Продукты</li>
+                <li class="accordion__inner-item">Производство печатных плат</li>
+                <li class="accordion__inner-item">Монтаж печатных плат</li>
+                <li class="accordion__inner-item">Комплектующие</li>
+                <li class="accordion__inner-item">Доставка</li>
+                <li class="accordion__inner-item">Контакты</li>
+              </ul>
+            </div>
+            <div class="accordion__item">
+              <h2 class="accordion__trigger">Наш офис</h2>
+              <ul class="accordion__content-list">
+                <li class="accordion__inner-item">г. Мытищи, Олимпийский проспект, д.10</li>
+                <li class="accordion__inner-item">+7 (495) 589-40-50</li>
+                <li class="accordion__inner-item">+7 (925) 389-58-29</li>
+                <li class="accordion__inner-item">+7 (925) 364-78-13</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 

@@ -28,9 +28,7 @@
   flex-direction: row;
   justify-content: space-between;
   column-gap: 10px;
-  padding: 0 60px 0 0
-
-  // min-width: ;
+  padding: 0 60px 0 0;
 }
 
 .header__nav {
@@ -58,11 +56,6 @@
 }
 
 .header__logo {
-  display: block;
-  max-width: 215px;
-  min-width: 215px;
-  max-height: 55px;
-
   @include vp-767 {
     margin-top: 5px;
   }

@@ -1,0 +1,21 @@
+.social {
+  padding: 0;
+  margin: 0 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social__item {
+  max-height: 40px;
+}
+
+.social__link {
+  display: block;
+  max-width: 40px;
+  max-height: 40px;
+  padding: 5px;
+}
