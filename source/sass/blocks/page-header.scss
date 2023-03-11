@@ -1,27 +1,30 @@
 .page-header {
-  // position: fixed;
+  position: fixed;
   display: block;
   width: 100%;
   padding: 30px 0 35px;
   min-height: 120px;
   background: $black-to-down;
   color: $color-default-white;
+
+  @include vp-1023 {
+    position: relative;
+  }
 }
 
 .page-header__inner {
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
+  justify-content: space-between;
   padding: 0 30px;
 }
 
 .page-header__nav {
-  margin-left: auto;
   font-style: normal;
 }
 
 .page-header__btn {
-  margin: 5px 0 10px auto;
+  margin: 5px 0 10px;
   padding: 10px 15px;
   width: 160px;
   font-size: 14px;

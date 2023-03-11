@@ -1283,6 +1283,7 @@ button,
 }
 
 .page-header {
+  position: fixed;
   display: block;
   width: 100%;
   padding: 30px 0 35px;
@@ -1301,16 +1302,18 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 0 30px;
 }
 
 .page-header__nav {
-  margin-left: auto;
   font-style: normal;
 }
 
 .page-header__btn {
-  margin: 5px 0 10px auto;
+  margin: 5px 0 10px;
   padding: 10px 15px;
   width: 160px;
   font-size: 14px;
@@ -1417,9 +1420,9 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
+@media (max-width: 1023px) {
+  .page-header {
+    position: relative;
   }
 }
 
