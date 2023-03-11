@@ -1313,7 +1313,7 @@ button,
   -webkit-column-gap: 10px;
   -moz-column-gap: 10px;
   column-gap: 10px;
-  padding: 0 30px;
+  padding: 0 60px 0 0;
 }
 
 .header__nav {
@@ -1397,6 +1397,11 @@ button,
   -moz-column-gap: 15px;
   column-gap: 15px;
   vertical-align: top;
+}
+
+.main-nav__icon {
+  max-width: 20px;
+  max-height: 20px;
 }
 
 /* @mixin hover-focus {
@@ -1497,7 +1502,21 @@ button,
   }
 
   .header {
-    padding: 10px 0 15px;
+    padding: 10px 0 20px;
+  }
+
+  .header__logo {
+    margin-top: 5px;
+  }
+
+  .main-nav {
+    margin: 0 4.5px;
+  }
+
+  .main-nav__list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
