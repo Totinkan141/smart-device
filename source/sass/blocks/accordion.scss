@@ -4,6 +4,16 @@
   display: grid;
   grid-template-columns: minmax(220px, 470px) 1fr;
   gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: 220px 1fr;
+    gap: 130px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 .accordion__item {
@@ -11,9 +21,19 @@
   display: flex;
   flex-direction: column;
   row-gap: 22px;
+
+  @include vp-767 {
+    margin: 0;
+    width: 100%;
+
+    &:not(:last-of-type) {
+      border-bottom: solid 1px rgba($color-grey, 0.7);
+    }
+  }
 }
 
 .accordion__trigger {
+  position: relative;
   margin: 0;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
@@ -21,6 +41,31 @@
   font-size: 15px;
   line-height: 16px;
   letter-spacing: 0.05em;
+
+  &::after,
+  &::before {
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: $color-grey;
+    top: 27px;
+    right: 27px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @include vp-767 {
+    padding: 22px 25px 21px;
+    width: 100%;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+    }
+  }
 }
 
 .accordion__content-list {
@@ -37,6 +82,16 @@
     grid-auto-flow: column;
     column-gap: 30px;
     max-width: 450px;
+
+    @include vp-1023 {
+      grid-template-columns: 220px;
+      grid-auto-flow: row;
+      max-width: 220px;
+    }
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -45,4 +100,51 @@
   display: block;
   line-height: 22px;
   color: rgba($color-secondary-white, 0.7);
+
+  address {
+    font-style: normal;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.accordion__link {
+  color: inherit;
+}
+
+.accordion__item.is-active {
+  @include vp-767 {
+    gap: 0;
+
+    .accordion__trigger::after {
+      content: none;
+    }
+
+    .accordion__content-list {
+      display: flex;
+      flex-direction: column;
+      margin: -4px 0 0;
+      padding: 0 25px 17px;
+      gap: 0;
+    }
+
+    .accordion__inner-item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &--address {
+        margin-bottom: 20px;
+      }
+
+      &--phone:not(:last-child) {
+        margin-bottom: 11px;
+      }
+    }
+  }
 }

@@ -1,6 +1,5 @@
 .social {
   padding: 0;
-  margin: 0 10px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -11,6 +10,10 @@
 
 .social__item {
   max-height: 40px;
+
+  @include vp-1023 {
+    margin: 5px 0 0;
+  }
 }
 
 .social__link {

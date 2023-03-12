@@ -1,20 +1,80 @@
 .footer {
-  padding: 50px 0 55px;
+  padding: 50px 10px 55px;
   background-color: $color-default-black;
   color: $color-secondary-white;
+  min-width: fit-content;
+
+  @include vp-1023 {
+    padding: 50px 0 65px;
+  }
+
+  @include vp-767 {
+    padding: 35px 0;
+  }
 }
 
 .footer__inner {
   display: flex;
   flex-direction: row;
+
+  @include vp-1023 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    gap: 24px;
+  }
 }
 
 .footer__contact {
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include vp-1023 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+.footer__logo {
+  @include vp-767 {
+    margin: 0 auto;
+  }
+}
+
+.footer__social {
+  margin: 0 10px;
+
+  @include vp-1023 {
+    margin: 0 -5px 0 0;
+  }
+
+  @include vp-767 {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 0 0 4px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .footer__accordion {
-  margin-left: auto;
+  margin: 0 0 0 auto;
+
+  @include vp-767 {
+    margin: 0;
+    padding: 0;
+    border-top: solid 1px rgba($color-grey, 0.7);
+    border-bottom: solid 1px rgba($color-grey, 0.7);
+  }
 }
