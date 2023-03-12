@@ -1,0 +1,8 @@
+.main {
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
+}

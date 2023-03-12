@@ -43,27 +43,30 @@
           </ul>
         </nav>
 
-        <a class="header__btn btn" href="#contact-form">
+        <a class="btn header__btn" href="#contact-form">
           Заказать звонок
         </a>
-
       </div>
     </header>
+
     <main class="main">
-      <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          <img src="./img/paper-airplane.png" alt="">
+      <h1 class="visually-hidden">Компания Smart Device поставляет электронные Комплектующие.</h1>
+      <section class="intro main__intro ">
+        <div class="intro__hero">
+          <img src="img/main-block/hero.jpg" alt="Материская плата.">
+        </div>
+        <div class="container intro__inner">
+          <h2 class="intro__ttile">Печатные платы</h2>
+          <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <button type="button" class="btn intro__btn" aria-label="Кнопка получения бесплатной консультации.">Получить
+            бесплатную консультацию</button>
         </div>
       </section>
+
       <section id="contact-form">
       </section>
     </main>
+
     <footer class="footer">
       <div class="container footer__inner">
         <div class="footer__contact">
@@ -126,10 +129,15 @@
           <div class="accordion__item is-active">
             <h2 class="accordion__trigger" data-accordion-item>Наш офис</h2>
             <ul class="accordion__content-list">
-              <li class="accordion__inner-item accordion__inner-item--address"><address>г. Мытищи, Олимпийский проспект, д.10</address></li>
-              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:74955894050" class="accordion__link">+7 (495) 589-40-50</a></li>
-              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253895829" class="accordion__link">+7 (925) 389-58-29</a></li>
-              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253647813" class="accordion__link">+7 (925) 364-78-13</a></li>
+              <li class="accordion__inner-item accordion__inner-item--address">
+                <address>г. Мытищи, Олимпийский проспект, д.10</address>
+              </li>
+              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:74955894050"
+                  class="accordion__link">+7 (495) 589-40-50</a></li>
+              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253895829"
+                  class="accordion__link">+7 (925) 389-58-29</a></li>
+              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253647813"
+                  class="accordion__link">+7 (925) 364-78-13</a></li>
             </ul>
           </div>
         </div>

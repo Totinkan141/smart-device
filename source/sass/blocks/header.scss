@@ -1,6 +1,7 @@
 .header {
   position: fixed;
   display: block;
+  z-index: 30;
   width: 100%;
   min-width: max-content;
   padding: 30px 10px 35px;
