@@ -447,7 +447,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "PT Mono", "Times New Roman", serif;
-  background-color: #f2f5f6;
+  background-color: #ffffff;
 }
 
 a {
@@ -1426,6 +1426,10 @@ button,
   padding: 120px 0 60px;
 }
 
+.main__about-company {
+  padding: 60px 0 100px;
+}
+
 .main-intro {
   padding: 305px 0 280px;
   position: relative;
@@ -1518,7 +1522,7 @@ button,
 }
 
 .advantages__inner {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .advantages__list {
@@ -1560,6 +1564,101 @@ button,
   font-family: "PT Mono", "Times New Roman", serif;
   font-size: 16px;
   line-height: 22px;
+}
+
+.about-company__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 98px;
+  min-width: 320px;
+}
+
+.about-company__year-block {
+  width: 150px;
+  height: 320px;
+  padding-left: 31px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.about-company__year-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f5f6;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-company__year-text {
+  margin: 0;
+  height: auto;
+  width: 324px;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 156px;
+  line-height: 184px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background-color: #ffffff;
+  mix-blend-mode: screen;
+}
+
+.about-company__title {
+  margin: 0 0 12px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about-company__text {
+  margin: 0 0 20px;
+  line-height: 22px;
+}
+
+.about-company__more-info {
+  display: none;
+}
+
+.about-company__btn {
+  margin: 21px 0 0;
+  padding: 14px 12px 12px;
+  min-width: 180px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00b2ff;
+  border: solid 1px #00b2ff;
+  border-radius: 3px;
 }
 
 .footer {
@@ -1808,6 +1907,10 @@ button,
     padding: 80px 0 40px;
   }
 
+  .main__about-company {
+    padding: 35px 0 80px;
+  }
+
   .main-intro {
     margin-top: -20px;
     padding: 200px 0 206px;
@@ -1839,6 +1942,26 @@ button,
 
   .advantages__name {
     margin: 0 0 8px;
+  }
+
+  .about-company__inner {
+    gap: 25px;
+  }
+
+  .about-company__year-block {
+    padding-left: 21px;
+  }
+
+  .about-company__year-text {
+    line-height: 176px;
+  }
+
+  .about-company__title {
+    margin: 0 0 10px;
+  }
+
+  .about-company__btn {
+    margin: -3px 0 0;
   }
 
   .footer {
@@ -1926,7 +2049,11 @@ button,
   }
 
   .main__advantages {
-    padding: 50px 0 25px;
+    padding: 48px 0 25px;
+  }
+
+  .main__about-company {
+    padding: 22px 0 80px;
   }
 
   .main-intro {
@@ -2000,6 +2127,36 @@ button,
   .advantages__detail {
     font-size: 14px;
     line-height: 19px;
+  }
+
+  .about-company__inner {
+    padding: 0 25px;
+  }
+
+  .about-company__year-block {
+    display: none;
+  }
+
+  .about-company__title {
+    margin: 0 0 12px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-company__text {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about-company__text--long {
+    display: none;
+  }
+
+  .about-company__btn {
+    margin: -4px 0 0;
+    padding: 8px 12px 9px;
+    min-width: 160px;
   }
 
   .footer {
