@@ -1,0 +1,172 @@
+.main-intro {
+  padding: 305px 0 280px;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-top: -20px;
+    padding: 200px 0 206px;
+  }
+
+  @include vp-767 {
+    padding: 170px 0 190px;
+  }
+}
+
+.main-intro__inner {
+  padding: 0 0 0 125px;
+
+  @include vp-767 {
+    padding: 0 25px;
+  }
+}
+
+.main-intro__hero {
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+
+  background-color: $color-default-black;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+  }
+
+  img {
+    z-index: -1;
+
+    max-width: 100%;
+    width: 100%;
+    min-width: 1920px;
+    max-height: 100%;
+    height: auto;
+    min-height: 100%;
+
+    object-fit: cover;
+  }
+
+  @include vp-767 {
+    img {
+      min-width: 1220px;
+      object-position: -244px;
+    }
+  }
+}
+
+.main-intro__ttile {
+  margin: 0 0 32px;
+
+  font-family: $ff-roboto-condensed;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+
+  @include vp-1023 {
+    margin: 0;
+
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 0 8px;
+  }
+}
+
+.main-intro__text {
+  margin: 0 0 48px;
+
+  max-width: 685px;
+
+  font-size: 22px;
+  line-height: 34px;
+
+
+  @include vp-1023 {
+    margin: 0 0 58px;
+  }
+
+
+  @include vp-767 {
+    margin: 0 0 44px -1px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.main-intro__btn {
+  display: inline-block;
+  padding: 15px 27px 17px 25px;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: $color-blue;
+  border: none;
+  border-radius: 3px;
+
+
+  @include vp-1023 {
+    margin-left: 46px;
+  }
+
+
+  @include vp-767 {
+    margin: 0;
+    padding: 13px 30px 11px;
+
+    min-width: 270px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.main-intro__btn-text {
+  &--short {
+    display: none;
+  }
+
+  @include vp-767 {
+    &--long {
+      display: none;
+    }
+
+    &--short {
+      display: inline-block;
+    }
+  }
+}
