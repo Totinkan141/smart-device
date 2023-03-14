@@ -1,5 +1,3 @@
-
-
 function initAccardion() {
   let accordion = document.querySelector('[data-accordion]');
   let accordionItems = accordion.querySelectorAll('[data-accordion-item]');

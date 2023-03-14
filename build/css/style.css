@@ -443,10 +443,11 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100%;
   font-family: "PT Mono", "Times New Roman", serif;
-  background-color: #f2f5f6;
+  background-color: #ffffff;
 }
 
 a {
@@ -1291,6 +1292,7 @@ button,
 .header {
   position: fixed;
   display: block;
+  z-index: 30;
   width: 100%;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -1406,6 +1408,257 @@ button,
 .main-nav__icon {
   max-width: 20px;
   max-height: 20px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+.main__advantages {
+  padding: 120px 0 60px;
+}
+
+.main__about-company {
+  padding: 60px 0 100px;
+}
+
+.main-intro {
+  padding: 305px 0 280px;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  color: #f2f5f6;
+}
+
+.main-intro__inner {
+  padding: 0 0 0 125px;
+}
+
+.main-intro__hero {
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #041827;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main-intro__hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
+  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+  background-image: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+}
+
+.main-intro__hero img {
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  min-width: 1920px;
+  max-height: 100%;
+  height: auto;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.main-intro__ttile {
+  margin: 0 0 32px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.main-intro__text {
+  margin: 0 0 48px;
+  max-width: 685px;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.main-intro__btn {
+  display: inline-block;
+  padding: 15px 27px 17px 25px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: #00b2ff;
+  border: none;
+  border-radius: 3px;
+}
+
+.main-intro__btn-text--short {
+  display: none;
+}
+
+.advantages {
+  display: block;
+}
+
+.advantages__inner {
+  padding: 0;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 595px))[2];
+  grid-template-columns: repeat(2, minmax(320px, 595px));
+  gap: 30px;
+}
+
+.advantages__item {
+  padding: 41px 45px 40px 39px;
+  min-height: 300px;
+  border: 1px solid #ebebeb;
+  border-left: 5px solid #00b2ff;
+}
+
+.advantages__icon {
+  max-width: 35px;
+  max-height: 35px;
+  margin: 0 0 14px;
+  color: #00b2ff;
+}
+
+.advantages__name {
+  margin: 0 0 11px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+}
+
+.advantages__detail {
+  margin: 0;
+  font-family: "PT Mono", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.about-company__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 98px;
+  min-width: 320px;
+}
+
+.about-company__year-block {
+  width: 150px;
+  height: 320px;
+  padding-left: 31px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.about-company__year-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f5f6;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about-company__year-text {
+  margin: 0;
+  height: auto;
+  width: 324px;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 156px;
+  line-height: 184px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background-color: #ffffff;
+  mix-blend-mode: screen;
+}
+
+.about-company__title {
+  margin: 0 0 12px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about-company__text {
+  margin: 0 0 20px;
+  line-height: 22px;
+}
+
+.about-company__more-info {
+  display: none;
+}
+
+.about-company__btn {
+  margin: 21px 0 0;
+  padding: 14px 12px 12px;
+  min-width: 180px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00b2ff;
+  border: solid 1px #00b2ff;
+  border-radius: 3px;
 }
 
 .footer {
@@ -1608,7 +1861,10 @@ button,
   }
 
   .header {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 20px 20px 25px 0;
     min-height: 100px;
   }
@@ -1637,6 +1893,75 @@ button,
 
   .main-nav__link span {
     display: none;
+  }
+
+  .main {
+    padding-top: 0;
+  }
+
+  .main__intro {
+    margin-top: 100px;
+  }
+
+  .main__advantages {
+    padding: 80px 0 40px;
+  }
+
+  .main__about-company {
+    padding: 35px 0 80px;
+  }
+
+  .main-intro {
+    margin-top: -20px;
+    padding: 200px 0 206px;
+  }
+
+  .main-intro__ttile {
+    margin: 0;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  .main-intro__text {
+    margin: 0 0 58px;
+  }
+
+  .main-intro__btn {
+    margin-left: 46px;
+  }
+
+  .advantages__item {
+    padding: 40px 40px 30px 39px;
+    min-height: 360px;
+    min-width: 270px;
+  }
+
+  .advantages__icon {
+    margin: 0 0 7px;
+  }
+
+  .advantages__name {
+    margin: 0 0 8px;
+  }
+
+  .about-company__inner {
+    gap: 25px;
+  }
+
+  .about-company__year-block {
+    padding-left: 21px;
+  }
+
+  .about-company__year-text {
+    line-height: 176px;
+  }
+
+  .about-company__title {
+    margin: 0 0 10px;
+  }
+
+  .about-company__btn {
+    margin: -3px 0 0;
   }
 
   .footer {
@@ -1717,6 +2042,121 @@ button,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .main {
+    overflow-x: none;
+  }
+
+  .main__advantages {
+    padding: 48px 0 25px;
+  }
+
+  .main__about-company {
+    padding: 22px 0 80px;
+  }
+
+  .main-intro {
+    padding: 170px 0 190px;
+  }
+
+  .main-intro__inner {
+    padding: 0 25px;
+  }
+
+  .main-intro__hero img {
+    min-width: 1220px;
+    -o-object-position: -244px;
+    object-position: -244px;
+  }
+
+  .main-intro__ttile {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0 0 8px;
+  }
+
+  .main-intro__text {
+    margin: 0 0 44px -1px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .main-intro__btn {
+    margin: 0;
+    padding: 13px 30px 11px;
+    min-width: 270px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .main-intro__btn-text--long {
+    display: none;
+  }
+
+  .main-intro__btn-text--short {
+    display: inline-block;
+  }
+
+  .advantages__inner {
+    padding: 0 25px;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: minmax(270px, 595px);
+    grid-template-columns: minmax(270px, 595px);
+    max-width: 595px;
+    margin: 0 auto;
+  }
+
+  .advantages__item {
+    padding: 27px 25px;
+    min-height: 340px;
+  }
+
+  .advantages__icon {
+    max-width: 30px;
+    min-height: 30px;
+  }
+
+  .advantages__name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__detail {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about-company__inner {
+    padding: 0 25px;
+  }
+
+  .about-company__year-block {
+    display: none;
+  }
+
+  .about-company__title {
+    margin: 0 0 12px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-company__text {
+    margin: 0 0 18px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about-company__text--long {
+    display: none;
+  }
+
+  .about-company__btn {
+    margin: -4px 0 0;
+    padding: 8px 12px 9px;
+    min-width: 160px;
   }
 
   .footer {
@@ -1927,5 +2367,16 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .advantages__item:hover:not(.focus-visible) {
+    border-color: #00b2ff;
+    background-color: #00b2ff;
+    color: #f2f5f6;
+  }
+
+  .advantages__item:hover:not(.focus-visible) .advantages__icon,
+  .advantages__item:hover:not(.focus-visible) .advantages__name {
+    color: #f2f5f6;
   }
 }

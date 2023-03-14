@@ -43,27 +43,100 @@
           </ul>
         </nav>
 
-        <a class="header__btn btn" href="#contact-form">
+        <a class="btn header__btn" href="#contact-form">
           Заказать звонок
         </a>
-
       </div>
     </header>
+
     <main class="main">
-      <section class="intro">
-        <div class="container">
-          <h1>Тестовая страница.</h1>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          <img src="./img/paper-airplane.png" alt="">
+      <h1 class="visually-hidden">Компания Smart Device поставляет электронные Комплектующие.</h1>
+      <section class="main-intro main__intro">
+        <div class="main-intro__hero">
+          <img src="img/main-block/hero.jpg" alt="Материская плата.">
+        </div>
+        <div class="container main-intro__inner">
+          <h2 class="main-intro__ttile">Печатные платы</h2>
+          <p class="main-intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <button type="button" class="btn main-intro__btn" aria-label="Кнопка получения бесплатной консультации.">
+            <span class="main-intro__btn-text main-intro__btn-text--long">Получить бесплатную консультацию</span>
+            <span class="main-intro__btn-text main-intro__btn-text--short">Бесплатная консультация</span>
+          </button>
         </div>
       </section>
+
+      <section class="advantages main__advantages">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <div class="container advantages__inner">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="35" height="35">
+                <use xlink:href="img/sprite.svg#stopwatch"></use>
+              </svg>
+              <h3 class="advantages__name">Оперативные сроки</h3>
+              <p class="advantages__detail">Усовершенствованная логистическая система позволяет нам просчитывать
+                стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="35" height="35">
+                <use xlink:href="img/sprite.svg#hired"></use>
+              </svg>
+              <h3 class="advantages__name">Крупные поставщики</h3>
+              <p class="advantages__detail">Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
+                CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей
+                продукции.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="35" height="35">
+                <use xlink:href="img/sprite.svg#detective"></use>
+              </svg>
+              <h3 class="advantages__name">Полная конфиденциальность</h3>
+              <p class="advantages__detail">По желанию клиента мы обеспечиваем полную конфиденциальность.
+              </p>
+            </li>
+            <li class="advantages__item">
+              <svg class="advantages__icon" width="35" height="35">
+                <use xlink:href="img/sprite.svg#tag"></use>
+              </svg>
+              <h3 class="advantages__name">Персонализация стоимости</h3>
+              <p class="advantages__detail">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
+                установить ту цену, которая Вас устраивает.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-company main__about-company" data-about-company>
+        <div class="container about-company__inner">
+          <div class="about-company__year-block">
+            <img src="./img/about-company/year-bg.png" alt="2022 год." class="about-company__year-image" width="150" height="320">
+            <p class="about-company__year-text">2022</p>
+          </div>
+          <div class="about-company__info">
+            <h2 class="about-company__title">О компании</h2>
+            <p class="about-company__text">Мы поставляем электронные комплектующие, производим печатные платы и
+              предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+            </p>
+            <p class="about-company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
+              HOLGLITRONIC, REFOND.<span class="about-company__text about-company__text--long" data-about-bonus-info>Печатные платы и комплектующие Service Devices применяются на предприятиях
+              Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
+              клиентов крупнейшие Производители светотехники России.</span></p>
+            <div class="about-company__more-info" data-about-bonus-info>
+              <p class="about-company__text">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
+              <p class="about-company__text">Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
+            </div>
+            <a class="btn about-company__btn" href="index-more.html"
+              aria-label="Показывает дополнительную информацию о компании." data-about-button>Подробнее</a>
+          </div>
+        </div>
+      </section>
+
       <section id="contact-form">
       </section>
     </main>
+
     <footer class="footer">
       <div class="container footer__inner">
         <div class="footer__contact">
@@ -126,10 +199,15 @@
           <div class="accordion__item is-active">
             <h2 class="accordion__trigger" data-accordion-item>Наш офис</h2>
             <ul class="accordion__content-list">
-              <li class="accordion__inner-item accordion__inner-item--address"><address>г. Мытищи, Олимпийский проспект, д.10</address></li>
-              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:74955894050" class="accordion__link">+7 (495) 589-40-50</a></li>
-              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253895829" class="accordion__link">+7 (925) 389-58-29</a></li>
-              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253647813" class="accordion__link">+7 (925) 364-78-13</a></li>
+              <li class="accordion__inner-item accordion__inner-item--address">
+                <address>г. Мытищи, Олимпийский проспект, д.10</address>
+              </li>
+              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:74955894050"
+                  class="accordion__link">+7 (495) 589-40-50</a></li>
+              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253895829"
+                  class="accordion__link">+7 (925) 389-58-29</a></li>
+              <li class="accordion__inner-item accordion__inner-item--phone"><a href="tel:79253647813"
+                  class="accordion__link">+7 (925) 364-78-13</a></li>
             </ul>
           </div>
         </div>
