@@ -20,7 +20,9 @@ function showMore() {
       });
     } else {
       hideItems.forEach((item) => {
-        item.style.display = 'none';
+        if (!(item.classList.contains('about-company__text--long') && window.screen.width > 770)) {
+          item.style.display = 'none';
+        }
       });
     }
   });
