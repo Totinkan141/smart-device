@@ -1,0 +1,168 @@
+.services {
+  color: $color-secondary-white;
+  background-color: $color-default-black;
+}
+
+.services__inner {
+  @include vp-767 {
+    padding: 0 25px;
+  }
+}
+
+.services__title {
+  margin: 0 0 55px;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  word-spacing: -0.07em;
+
+  @include vp-1023 {
+    margin: 0 0 38px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 29px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.services__title-text {
+  &--short {
+    display: none;
+  }
+
+  @include vp-767 {
+    &--long {
+      display: none;
+    }
+
+    &--short {
+      display: inline;
+    }
+  }
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  max-width: 100%;
+  width: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 10px;
+  row-gap: 30px;
+
+  @include vp-1023 {
+    display: grid;
+    grid-template-columns: minmax(270px, 1fr);
+  }
+}
+
+.services__item {
+  padding: 49px 40px 60px;
+
+  position: relative;
+
+  max-width: 350px;
+  width: 100%;
+  min-width: 310px;
+  min-height: 650px;
+
+  z-index: 0;
+
+  @include vp-1023 {
+    padding: 37px 60px 60px 45px;
+
+    max-width: 100%;
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    padding: 27px 40px 40px 29px;
+
+    min-width: 270px;
+  }
+}
+
+.services__image-background {
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba($color-blue, 0.25);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: "";
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(4, 24, 39, 0.5);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.services__name {
+  max-width: 160px;
+
+  margin: 0;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.services__item-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  content: "";
+
+  width: 60px;
+  height: 60px;
+  border-radius: 3px 0 0 0;
+
+  right: 0;
+  bottom: 0;
+
+  background-color: $color-blue;
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
+}

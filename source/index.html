@@ -13,6 +13,7 @@
 
 <body>
   <div class="wrapper">
+    <!-- Шапка страницы -->
     <header class="header">
       <div class="container header__inner">
         <a class="logo header__logo" href="index.html" aria-label="Ссылка на главную страницу.">
@@ -49,8 +50,11 @@
       </div>
     </header>
 
+    <!-- Содержимое страницы -->
     <main class="main">
       <h1 class="visually-hidden">Компания Smart Device поставляет электронные Комплектующие.</h1>
+
+      <!-- Блок основного экрана / интро -->
       <section class="main-intro main__intro">
         <div class="main-intro__hero">
           <img src="img/main-block/hero.jpg" alt="Материская плата.">
@@ -65,6 +69,7 @@
         </div>
       </section>
 
+      <!-- Блок преимуществ -->
       <section class="advantages main__advantages">
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="container advantages__inner">
@@ -108,6 +113,7 @@
         </div>
       </section>
 
+      <!-- Блок с информацией О компании -->
       <section class="about-company main__about-company" data-about-company>
         <div class="container about-company__inner">
           <div class="about-company__year-block">
@@ -120,7 +126,7 @@
               предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             </p>
             <p class="about-company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
-              HOLGLITRONIC, REFOND.<span class="about-company__text about-company__text--long" data-about-bonus-info>Печатные платы и комплектующие Service Devices применяются на предприятиях
+              HOLGLITRONIC, REFOND. <span class="about-company__text about-company__text--long" data-about-bonus-info>Печатные платы и комплектующие Service Devices применяются на предприятиях
               Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
               клиентов крупнейшие Производители светотехники России.</span></p>
             <div class="about-company__more-info" data-about-bonus-info>
@@ -133,10 +139,66 @@
         </div>
       </section>
 
+      <!-- Блок с товарами и услугами -->
+      <section class="services main__services">
+        <div class="container services__inner">
+          <h2 class="services__title">
+            <span class="services__title-text services__title-text--long">Smart Device предлагает следующие товары и услуги</span>
+            <span class="services__title-text services__title-text--short">Товары и услуги Smart&nbsp;Device</span>
+          </h2>
+          <ul class="services__list">
+            <li class="services__item">
+              <picture class="services__image-background">
+                <source media="(max-width: 374px)" srcset="img/products/mobile/card-bg-1.jpg">
+                <source media="(max-width: 1023px)" srcset="img/products/tablet/card-bg-1.jpg">
+                <img src="img/products/desktop/card-bg-1.jpg" alt="Материская плата."  width="350" height="650">
+              </picture>
+              <h3 class="services__name">Производство печатныx плат</h3>
+              <a href="#catalog.html" class="btn services__item-button">
+                <svg width="5" height="10">
+                  <use xlink:href="img/sprite.svg#services-button-arrow"></use>
+                </svg>
+                <span class="visually-hidden">Перейти на страницу товара.</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <picture class="services__image-background">
+                <source media="(max-width: 374px)" srcset="img/products/mobile/card-bg-2.jpg">
+                <source media="(max-width: 1023px)" srcset="img/products/tablet/card-bg-2.jpg">
+                <img src="img/products/desktop/card-bg-2.jpg" alt="Материская плата."  width="350" height="650">
+              </picture>
+              <h3 class="services__name">Монтаж печатных плат</h3>
+              <a href="#catalog.html" class="btn services__item-button">
+                <svg width="5" height="10">
+                  <use xlink:href="img/sprite.svg#services-button-arrow"></use>
+                </svg>
+                <span class="visually-hidden">Перейти на страницу товара.</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <picture class="services__image-background">
+                <source media="(max-width: 374px)" srcset="img/products/mobile/card-bg-3.jpg">
+                <source media="(max-width: 1023px)" srcset="img/products/tablet/card-bg-3.jpg">
+                <img src="img/products/desktop/card-bg-3.jpg" alt="Материская плата."  width="350" height="650">
+              </picture>
+              <h3 class="services__name">Комплектующие для светотехники</h3>
+              <a href="#catalog.html" class="btn services__item-button">
+                <svg width="5" height="10">
+                  <use xlink:href="img/sprite.svg#services-button-arrow"></use>
+                </svg>
+                <span class="visually-hidden">Перейти на страницу товара.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Блок формы с обратной связью -->
       <section id="contact-form">
       </section>
     </main>
 
+    <!-- Подвал страницы -->
     <footer class="footer">
       <div class="container footer__inner">
         <div class="footer__contact">
