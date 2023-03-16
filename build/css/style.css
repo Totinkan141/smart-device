@@ -1665,6 +1665,10 @@ button,
   border-radius: 3px;
 }
 
+.about-company__btn-text--close {
+  display: none;
+}
+
 .services {
   color: #ffffff;
   background-color: #041827;
