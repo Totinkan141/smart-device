@@ -1670,6 +1670,11 @@ button,
   background-color: #041827;
 }
 
+.services__item-wrapper {
+  display: block;
+  color: inherit;
+}
+
 .services__title {
   margin: 0 0 55px;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
@@ -1769,6 +1774,7 @@ button,
   content: "";
   width: 60px;
   height: 60px;
+  border: none;
   border-radius: 3px 0 0 0;
   right: 0;
   bottom: 0;

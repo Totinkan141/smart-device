@@ -9,6 +9,11 @@
   }
 }
 
+.services__item-wrapper {
+  display: block;
+  color: inherit;
+}
+
 .services__title {
   margin: 0 0 55px;
 
@@ -154,6 +159,8 @@
 
   width: 60px;
   height: 60px;
+
+  border: none;
   border-radius: 3px 0 0 0;
 
   right: 0;
