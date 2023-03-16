@@ -18,12 +18,18 @@ function showMore() {
       hideItems.forEach((item) => {
         item.style.display = 'inline-block';
       });
+      buttonShowMore.querySelector('[data-about-button-text="more"]').style.display = 'none';
+      buttonShowMore.querySelector('[data-about-button-text="close"]').style.display = 'inline-block';
+
     } else {
       hideItems.forEach((item) => {
         if (!(item.classList.contains('about-company__text--long') && window.screen.width > 770)) {
           item.style.display = 'none';
         }
       });
+      buttonShowMore.querySelector('[data-about-button-text="more"]').style.display = 'inline-block';
+      buttonShowMore.querySelector('[data-about-button-text="close"]').style.display = 'none';
+
     }
   });
 }
