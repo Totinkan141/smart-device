@@ -61,4 +61,12 @@
 
 .main__feedback {
   padding: 165px 0 250px;
+
+  @include vp-1023 {
+    padding: 47px 0 127px;
+  }
+
+  @include vp-1023 {
+    padding: 47px 0 87px;
+  }
 }
