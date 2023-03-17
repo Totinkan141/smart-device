@@ -29,7 +29,6 @@ function showMore() {
       });
       buttonShowMore.querySelector('[data-about-button-text="more"]').style.display = 'inline-block';
       buttonShowMore.querySelector('[data-about-button-text="close"]').style.display = 'none';
-
     }
   });
 }
