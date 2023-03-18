@@ -3,4 +3,16 @@
   max-width: 215px;
   min-width: 215px;
   max-height: 55px;
+
+  @include hover-focus {
+    opacity: 0.65;
+
+    transition: $trans-default;
+  }
+
+  // @include focus {
+  //   opacity: 0.65;
+
+  //   transition: $trans-default;
+  // }
 }

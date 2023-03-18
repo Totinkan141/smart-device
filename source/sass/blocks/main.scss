@@ -28,13 +28,13 @@
   }
 
   @include vp-767 {
-    padding: 48px 0 25px;
+    padding: 50px 0 25px;
   }
 }
 
 
 .main__about-company {
-  padding: 60px 0 100px;
+  padding: 60px 0 101px;
 
 
   @include vp-1023 {
@@ -42,7 +42,7 @@
   }
 
   @include vp-767 {
-    padding: 22px 0 80px;
+    padding: 27px 0 80px;
   }
 }
 
@@ -60,13 +60,13 @@
 }
 
 .main__feedback {
-  padding: 165px 0 250px;
+  padding: 165px 0 248px;
 
   @include vp-1023 {
-    padding: 47px 0 127px;
+    padding: 45px 0 126px;
   }
 
-  @include vp-1023 {
+  @include vp-767 {
     padding: 47px 0 87px;
   }
 }

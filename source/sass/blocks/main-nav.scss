@@ -18,7 +18,7 @@
   max-width: 480px;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 12px 0 8px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -28,6 +28,7 @@
   column-gap: 20px;
 
   @include vp-1023 {
+    padding: 0;
     max-width: max-content;
     margin-left: auto;
   }
@@ -56,6 +57,12 @@
     span {
       display: none;
     }
+  }
+
+  @include hover-focus {
+    color: rgba($color-blue, 0.8);
+
+    transition: $tf-default;
   }
 }
 

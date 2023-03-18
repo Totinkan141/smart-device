@@ -12,6 +12,13 @@
 .services__item-wrapper {
   display: block;
   color: inherit;
+
+  @include hover-focus {
+    .services__image-background {
+      opacity: 0.65;
+      transition: $trans-default;
+    }
+  }
 }
 
 .services__title {
@@ -60,20 +67,28 @@
   max-width: 100%;
   width: auto;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(325px, 350px));
+
+  @include vp-1279 {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  column-gap: 85px;
   row-gap: 30px;
 
   @include vp-1023 {
-    display: grid;
+    margin: 0;
+
+    max-width: 100%;
     grid-template-columns: minmax(270px, 1fr);
   }
 }
 
 .services__item {
-  padding: 49px 40px 60px;
+  padding: 47px 40px 60px;
 
   position: relative;
 
@@ -83,6 +98,10 @@
   min-height: 650px;
 
   z-index: 0;
+
+  @include vp-1279 {
+    max-width: 400px;
+  }
 
   @include vp-1023 {
     padding: 37px 60px 60px 45px;
@@ -167,6 +186,11 @@
   bottom: 0;
 
   background-color: $color-blue;
+
+  @include hover-focus {
+    opacity: 0.65;
+    transition: $trans-default;
+  }
 
   @include vp-767 {
     width: 40px;
