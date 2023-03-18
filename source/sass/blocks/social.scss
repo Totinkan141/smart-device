@@ -21,4 +21,10 @@
   max-width: 40px;
   max-height: 40px;
   padding: 5px;
+  color: $color-default-white;
+
+  @include hover-focus {
+    color: rgba($color-blue, 0.8);
+    transition: $trans-default;
+  }
 }

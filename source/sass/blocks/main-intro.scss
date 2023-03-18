@@ -8,7 +8,7 @@
 
   @include vp-1023 {
     margin-top: -20px;
-    padding: 200px 0 206px;
+    padding: 199px 0 205px;
   }
 
   @include vp-767 {
@@ -17,7 +17,7 @@
 }
 
 .main-intro__inner {
-  padding: 0 0 0 125px;
+  padding: 0 20px 0 146px;
 
   @include vp-767 {
     padding: 0 25px;
@@ -101,7 +101,7 @@
 }
 
 .main-intro__text {
-  margin: 0 0 48px;
+  margin: 0 0 46px;
 
   max-width: 685px;
 
@@ -125,6 +125,8 @@
   display: inline-block;
   padding: 15px 27px 17px 25px;
 
+  min-height: 55px;
+
   font-family: $ff-roboto-condensed;
   font-weight: 700;
   font-size: 18px;
@@ -138,6 +140,10 @@
   border: none;
   border-radius: 3px;
 
+  span {
+    color: inherit;
+    background-color: inherit;
+  }
 
   @include vp-1023 {
     margin-left: 46px;
@@ -149,6 +155,7 @@
     padding: 13px 30px 11px;
 
     min-width: 270px;
+    min-height: auto;
 
     font-size: 14px;
     line-height: 16px;

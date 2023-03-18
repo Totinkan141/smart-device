@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
   // Modules
 
   // ---------------------------------
@@ -21,18 +20,25 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+
     initModals();
 
     const form = new Form();
-    window.form = form;
     form.init();
+    window.form = form;
 
-    form.initPhoneInput(document.querySelector('[data-validate-type="phone"]'));
 
-    form._onFormInput(document.querySelector('[data-validate-type="text"] input'), false);
-    form.validateFormElement(document.querySelector('[data-validate-type="text"] input'), false);
+    const PHONES_INPUT = document.querySelectorAll('[data-validate-type="phone"]');
 
-    form.validateForm(document.querySelector('[data-form-validate]'));
+    PHONES_INPUT.forEach((phone) => {
+      form._initPhoneInput(phone);
+    });
+
+
+    document.querySelectorAll('form').forEach((element) => {
+      form.validateForm(element);
+      element.querySelector('[data-form-submit]').addEventListener('click', form.reset(element));
+    });
 
     initAccardion();
     showMore();

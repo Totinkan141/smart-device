@@ -35,9 +35,9 @@
   flex-direction: row;
   gap: 10px;
   justify-content: space-between;
+  flex-wrap: wrap;
 
-  max-width: 1220px;
-  padding-right: 10px;
+  padding: 0 30px 0 20px;
 
   @include vp-767 {
     padding: 0 25px;
@@ -152,7 +152,7 @@
   // Сетка формы в блоке обратной связи
   form {
     display: grid;
-    grid-template-columns: repeat(2, 275px);
+    grid-template-columns: repeat(2, minmax(235px, 275px));
     max-width: 100%;
 
     padding-left: 5px;
@@ -171,47 +171,52 @@
       grid-template-columns: repeat(1, minmax(270px, 1fr));
     }
 
+
     // Задаёт инпутов формы для инпутов
-    label {
+    input,
+    textarea {
+      max-width: 100%;
+      width: 100%;
+
       color: rgba($color-secondary-white, 0.8);
+      background-color: rgba($color-default-black, 0.15);
+      border-color: rgba($color-default-black, 0.15);
 
-      > input,
-      > textarea {
-        max-width: 100%;
-        width: 100%;
-
+      &::placeholder {
         color: inherit;
-        background-color: rgba($color-default-black, 0.15);
-        border-color: rgba($color-default-black, 0.15);
+      }
+    }
 
-        &::placeholder {
-          color: inherit;
-        }
+    input {
+      padding: 9px 12px;
+
+      &:invalid {
+        border-color: $color-torch-red;
       }
 
-      > textarea {
-        max-width: 100%;
-        min-height: 155px;
-
-        padding: 24px 12px 9px;
-
-        @include vp-767 {
-          min-height: 180px;
-        }
+      &:valid {
+        border-color: $color-success;
       }
+    }
 
-      > input {
-        padding: 9px 12px;
+    textarea {
+      max-width: 100%;
+      min-height: 155px;
+
+      padding: 24px 12px 9px;
+
+      @include vp-767 {
+        min-height: 180px;
       }
     }
 
     // Блок с согласием на обработку данных и отправка формы
     .feedback__agree {
       grid-column: 1 / 3;
-      padding-top: 15px;
+      padding-top: 14px;
 
       display: grid;
-      grid-template-columns: repeat(2, 275px);
+      grid-template-columns: repeat(2, minmax(235px, 275px));
       column-gap: 30px;
 
       @include vp-1023 {
@@ -237,6 +242,7 @@
         padding: 12px 11px 9px;
 
         cursor: pointer;
+        transition: $trans-default;
 
         font-family: $ff-roboto-condensed;
         font-weight: 700;
@@ -251,6 +257,20 @@
 
         border: 0;
         border-radius: 3px;
+
+        @include focus {
+          color: $color-blue;
+          background-color: rgba($color-default-black, 0.8);
+
+          transition: $trans-default;
+        }
+
+        @include hover-focus {
+          color: $color-blue;
+          background-color: rgba($color-default-black, 0.8);
+
+          transition: $trans-default;
+        }
 
         @include vp-1023 {
           padding: 16px 11px 9px;
@@ -276,10 +296,15 @@
           padding: 25px 0 0;
         }
 
+        input.focus-visible ~ .feedback__agree-icon {
+          border-color: $color-default-black;
+          transition: $trans-default;
+        }
+
         // Позиционирование иконки чекбокса
         .feedback__agree-icon {
           top: 8px;
-          left: 16px;
+          left: 10px;
 
           @include vp-1023 {
             top: 9px;
@@ -318,6 +343,88 @@
         }
       }
     }
+
+    &:invalid {
+      button[type="submit"] {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+    }
   }
 }
 
+// Форма обратной связи в попапе
+.feedback--modal {
+  position: relative;
+
+  &::before {
+    content: none;
+  }
+
+  margin-right: 15px;
+  padding-top: 36px;
+
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 610px;
+
+  // Заголовок в попапе форме
+  .feedback__title {
+    font-size: 30px;
+    line-height: 42px;
+
+    margin: 0 0 6px;
+  }
+
+  // Текст в попапе форме
+  .feedback__text {
+    max-width: 400px;
+
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 37px -1px;
+  }
+
+  .feedback__content {
+    // Сетка формы обратной связи в попапе
+    form {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feedback__agree {
+      padding-top: 5px;
+      grid-column: 1 / 2;
+      grid-template-columns: repeat(1, minmax(270px, 1fr));
+
+      button {
+        grid-column: 1 / 2;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .feedback__agree-checkbox {
+        margin-top: 17px;
+        padding: 0 0 10px;
+        grid-column: 1 / 2;
+
+        .feedback__agree-icon {
+          top: 4px;
+          left: 9px;
+        }
+      }
+    }
+  }
+
+  .feedback__close-btn {
+    top: 15px;
+    right: 15px;
+    padding: 10px;
+
+    @include hover-focus {
+      background-color: rgba($color-default-black, 0.65);
+      transition: $trans-default;
+    }
+  }
+}
