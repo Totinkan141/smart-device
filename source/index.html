@@ -361,16 +361,19 @@
           <form action="https://echo.htmlacademy.ru/" method="post" data-form-validate data-form-modal>
             <div class="custom-input feedback__input" data-validate-type="text" data-limitation="name" data-required>
               <label>
+                <span class="visually-hidden">Поле для ввода имени.</span>
                 <input type="text" name="user-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" required data-focus>
               </label>
             </div>
             <div class="custom-input feedback__input" data-validate-type="phone" data-limitation="digit" data-required>
               <label>
+                <span class="visually-hidden">Поле для ввода номера телефона.</span>
                 <input type="tel" name="user-phone" placeholder="Телефон" placeholder="Телефон" pattern="[+7]{2} [(][0-9]{3}[)] [0-9]{3} [0-9]{2} [0-9]{2}" minlength="18" maxlength="18" required>
               </label>
             </div>
             <div class="custom-textarea feedback__textarea" data-validate-type="text">
               <label>
+                <span class="visually-hidden">Поле ввода вопроса.</span>
                 <textarea name="user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
               </label>
             </div>
