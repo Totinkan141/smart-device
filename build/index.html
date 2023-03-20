@@ -236,19 +236,19 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
 
               <div class="custom-input feedback__input">
-                <label>
+                <label aria-label="Поле для ввода имени.">
                   <input type="text" name="user-name" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,}" required>
                 </label>
               </div>
 
               <div class="custom-input feedback__input" data-validate-type="phone" data-on-input-validate>
-                <label>
-                  <input type="tel" name="user-phone" placeholder="Телефон" pattern="[+7]{2} [(][0-9]{3}[)] [0-9]{3} [0-9]{2} [0-9]{2}" minlength="18" maxlength="18" required>
+                <label aria-label="Поле для ввода номера телефона.">
+                  <input type="tel" name="user-phone" placeholder="Телефон" pattern="[+7]{2} [(][0-9]{3}[)] [0-9]{3} [0-9]{2} [0-9]{2}" minlength="4" maxlength="18" required>
                 </label>
               </div>
 
               <div class="custom-textarea feedback__textarea" data-validate-type="text" data-on-input-validate>
-                <label>
+                <label aria-label="Поле ввода вопроса.">
                   <textarea name="user-question" cols="30" rows="1" placeholder="Ваш вопрос"></textarea>
                 </label>
               </div>
