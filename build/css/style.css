@@ -1497,7 +1497,7 @@ button,
   object-fit: cover;
 }
 
-.main-intro__ttile {
+.main-intro__title {
   margin: 0 0 32px;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-size: 80px;
@@ -2454,7 +2454,7 @@ button,
     padding: 199px 0 205px;
   }
 
-  .main-intro__ttile {
+  .main-intro__title {
     margin: 0;
     font-size: 64px;
     line-height: 75px;
@@ -2698,7 +2698,7 @@ button,
     object-position: -244px;
   }
 
-  .main-intro__ttile {
+  .main-intro__title {
     font-size: 36px;
     line-height: 42px;
     margin: 0 0 8px;

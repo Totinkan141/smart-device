@@ -34,7 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
       form._initPhoneInput(phone);
     });
 
-
     document.querySelectorAll('form').forEach((element) => {
       form.validateForm(element);
       element.querySelector('[data-form-submit]').addEventListener('click', form.reset(element));
