@@ -1,4 +1,3 @@
-//Блок обратной связи
 .feedback {
   position: relative;
 
@@ -6,7 +5,6 @@
 
   background-color: $color-blue;
 
-  // Фоновый треугольник на десктопе
   &::before {
     position: absolute;
 
@@ -23,7 +21,6 @@
     opacity: 0.5;
     clip-path: polygon(0 0, 0 100%, 100% 0);
 
-    // отключает до дестопного разрешения
     @include vp-1023 {
       content: none;
     }
@@ -44,7 +41,6 @@
   }
 }
 
-// Фоновое изображение
 .feedback__image {
   margin-top: 80px;
 
@@ -139,7 +135,6 @@
   }
 }
 
-// Форма в обратной связи
 .feedback__content {
   max-width: 585px;
   width: 100%;
@@ -149,7 +144,6 @@
     max-width: 100%;
   }
 
-  // Сетка формы в блоке обратной связи
   form {
     display: grid;
     grid-template-columns: repeat(2, minmax(235px, 275px));
@@ -172,7 +166,6 @@
     }
 
 
-    // Задаёт инпутов формы для инпутов
     input,
     textarea {
       max-width: 100%;
@@ -189,6 +182,7 @@
 
     input {
       padding: 9px 12px;
+
 
       &:invalid {
         border-color: $color-torch-red;
@@ -210,7 +204,6 @@
       }
     }
 
-    // Блок с согласием на обработку данных и отправка формы
     .feedback__agree {
       grid-column: 1 / 3;
       padding-top: 14px;
@@ -230,7 +223,6 @@
         grid-template-columns: repeat(1, minmax(270px, 1fr));
       }
 
-      // Стили для кнопки отправки
       button {
         max-width: 275px;
         min-height: 45px;
@@ -284,7 +276,6 @@
         }
       }
 
-      // Чекбокс с согласием на обраотку данных
       .custom-toggle--checkbox {
         padding: 14px 0 0;
 
@@ -301,7 +292,6 @@
           transition: $trans-default;
         }
 
-        // Позиционирование иконки чекбокса
         .feedback__agree-icon {
           top: 8px;
           left: 10px;
@@ -317,7 +307,6 @@
           }
         }
 
-        // Стили для лэйбла у чекбоскса
         label {
           position: relative;
           padding: 2px 0 0 36px;
@@ -337,7 +326,6 @@
           }
         }
 
-        // Все элементы внутри наследуют цвет
         label > * {
           color: inherit;
         }
@@ -353,7 +341,6 @@
   }
 }
 
-// Форма обратной связи в попапе
 .feedback--modal {
   position: relative;
 
@@ -368,7 +355,6 @@
   min-width: 300px;
   min-height: 610px;
 
-  // Заголовок в попапе форме
   .feedback__title {
     font-size: 30px;
     line-height: 42px;
@@ -376,7 +362,6 @@
     margin: 0 0 6px;
   }
 
-  // Текст в попапе форме
   .feedback__text {
     max-width: 400px;
 
@@ -386,7 +371,6 @@
   }
 
   .feedback__content {
-    // Сетка формы обратной связи в попапе
     form {
       padding: 0;
       display: flex;
