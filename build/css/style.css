@@ -1974,10 +1974,6 @@ button,
   padding: 9px 12px;
 }
 
-.feedback__content form input:invalid {
-  border-color: #ff1553;
-}
-
 .feedback__content form input:valid {
   border-color: #22b259;
 }
@@ -2075,7 +2071,7 @@ button,
   color: inherit;
 }
 
-.feedback__content form:invalid button[type=submit] {
+.feedback__content form .is-invalid button[type=submit] {
   opacity: 0.3;
   pointer-events: none;
 }
