@@ -47,7 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
       element.querySelector('[data-form-submit]').addEventListener('click', submitForm(element));
     });
 
-    initAccardion();
+    if (initAccardion() !== null) {
+      initAccardion();
+    }
+
     showMore();
   });
 });
