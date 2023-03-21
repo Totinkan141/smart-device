@@ -183,11 +183,6 @@
     input {
       padding: 9px 12px;
 
-
-      &:invalid {
-        border-color: $color-torch-red;
-      }
-
       &:valid {
         border-color: $color-success;
       }
@@ -332,7 +327,7 @@
       }
     }
 
-    &:invalid {
+    .is-invalid {
       button[type="submit"] {
         opacity: 0.3;
         pointer-events: none;

@@ -27,6 +27,14 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     window.form = form;
 
+    const submitForm = (submitedForm) => {
+      submitedForm.classList.remove('is-invalid');
+      if (form.validateForm(submitedForm)) {
+        form.reset(submitedForm);
+      } else {
+        submitedForm.classList.add('is-invalid');
+      }
+    };
 
     const PHONES_INPUT = document.querySelectorAll('[data-validate-type="phone"]');
 
@@ -34,9 +42,9 @@ window.addEventListener('DOMContentLoaded', () => {
       form._initPhoneInput(phone);
     });
 
+
     document.querySelectorAll('form').forEach((element) => {
-      form.validateForm(element);
-      element.querySelector('[data-form-submit]').addEventListener('click', form.reset(element));
+      element.querySelector('[data-form-submit]').addEventListener('click', submitForm(element));
     });
 
     initAccardion();
