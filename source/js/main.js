@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
       element.querySelector('[data-form-submit]').addEventListener('click', submitForm(element));
     });
 
-    if (initAccardion() !== null) {
+    if (initAccardion()) {
       initAccardion();
     }
 
