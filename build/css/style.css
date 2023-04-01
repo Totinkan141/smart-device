@@ -1703,6 +1703,14 @@ button,
   border-radius: 3px;
 }
 
+.about-company__btn > .about-company__btn-text--close {
+  display: none;
+}
+
+.about-company__btn > .about-company__btn-text--more {
+  display: inline-block;
+}
+
 .about-company__btn.focus-visible:focus {
   color: #ffffff;
   background-color: #00b2ff;
@@ -1711,7 +1719,11 @@ button,
   transition: ease;
 }
 
-.about-company__btn-text--close {
+.about-company__btn.is-active .about-company__btn-text--close {
+  display: inline-block;
+}
+
+.about-company__btn.is-active .about-company__btn-text--more {
   display: none;
 }
 

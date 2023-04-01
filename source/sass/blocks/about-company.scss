@@ -145,6 +145,16 @@
   border: solid 1px $color-blue;
   border-radius: 3px;
 
+  > .about-company__btn-text {
+    &--close {
+      display: none;
+    }
+
+    &--more {
+      display: inline-block;
+    }
+  }
+
   @include hover-focus {
     color: $color-secondary-white;
     background-color: $color-blue;
@@ -163,8 +173,14 @@
   }
 }
 
-.about-company__btn-text {
-  &--close {
-    display: none;
+.about-company__btn.is-active {
+  .about-company__btn-text {
+    &--close {
+      display: inline-block;
+    }
+
+    &--more {
+      display: none;
+    }
   }
 }

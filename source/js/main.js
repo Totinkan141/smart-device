@@ -51,7 +51,9 @@ window.addEventListener('DOMContentLoaded', () => {
       initAccardion();
     }
 
-    showMore();
+    if (showMore()) {
+      showMore();
+    }
   });
 });
 
