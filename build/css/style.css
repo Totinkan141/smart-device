@@ -979,7 +979,7 @@ button,
 }
 
 .custom-toggle input:checked + .custom-toggle__icon::before {
-  background-image: url("../../img/svg/checkbox-checked.svg");
+  background-image: url("../img/svg/checkbox-checked.svg");
 }
 
 .custom-toggle.is-invalid label span {
@@ -2728,9 +2728,9 @@ button,
   }
 
   .advantages__list {
-    -ms-grid-columns: minmax(270px, 595px);
-    grid-template-columns: minmax(270px, 595px);
-    max-width: 595px;
+    -ms-grid-columns: minmax(270px, 1fr);
+    grid-template-columns: minmax(270px, 1fr);
+    max-width: 100%;
     margin: 0 auto;
   }
 
