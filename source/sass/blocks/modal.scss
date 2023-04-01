@@ -108,6 +108,7 @@
   }
 
   &.is-active {
+    background-color: $color-overlay;
     transform: scale(1);
     visibility: visible;
     opacity: 1;

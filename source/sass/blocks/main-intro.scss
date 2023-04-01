@@ -29,6 +29,8 @@
   max-width: 100%;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: center;
 
 
   background-color: $color-default-black;
@@ -65,12 +67,15 @@
     min-height: 100%;
 
     object-fit: cover;
-    background-size: cover;
+  }
+
+  @include vp-1023 {
+    object-position: -140px;
+    object-fit: contain;
   }
 
   @include vp-767 {
     img {
-      min-width: 1220px;
       object-position: -244px;
     }
   }

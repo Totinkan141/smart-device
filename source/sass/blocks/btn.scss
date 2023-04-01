@@ -5,6 +5,7 @@
   font-family: $ff-roboto-condensed;
   color: $color-default-white;
   cursor: pointer;
+  user-select: none;
 
   transition: opacity $trans-default;
 
