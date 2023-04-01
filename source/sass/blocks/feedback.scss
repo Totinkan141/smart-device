@@ -124,6 +124,14 @@
   max-width: 100%;
 }
 
+.feedback__agree-checkbox label {
+  @include hover-focus {
+    .feedback__agree-icon {
+      border-color: rgba($color-default-black, 0.65);
+    }
+  }
+}
+
 .feedback__agree-icon {
   top: 8px;
   left: 16px;

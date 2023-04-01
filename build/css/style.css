@@ -1918,6 +1918,10 @@ button,
   max-width: 100%;
 }
 
+.feedback__agree-checkbox label.focus-visible:focus .feedback__agree-icon {
+  border-color: rgba(4, 24, 39, 0.65);
+}
+
 .feedback__agree-icon {
   top: 8px;
   left: 16px;
@@ -3148,6 +3152,10 @@ button,
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
+  }
+
+  .feedback__agree-checkbox label:hover:not(.focus-visible) .feedback__agree-icon {
+    border-color: rgba(4, 24, 39, 0.65);
   }
 
   .feedback__content form .feedback__agree button:hover:not(.focus-visible) {
