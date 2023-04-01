@@ -1718,9 +1718,16 @@ button,
 .services__item-wrapper {
   display: block;
   color: inherit;
+  padding: 47px 40px 60px;
 }
 
-.services__item-wrapper.focus-visible:focus .services__image-background {
+.services__item-wrapper.focus-visible:focus {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.services__item-wrapper.focus-visible:focus .services__image-background,
+.services__item-wrapper.focus-visible:focus .services__item-icon {
   opacity: 0.65;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -1757,7 +1764,6 @@ button,
 }
 
 .services__item {
-  padding: 47px 40px 60px;
   position: relative;
   max-width: 350px;
   width: 100%;
@@ -1806,7 +1812,7 @@ button,
   line-height: 30px;
 }
 
-.services__item-button {
+.services__item-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1825,13 +1831,6 @@ button,
   right: 0;
   bottom: 0;
   background-color: #00b2ff;
-}
-
-.services__item-button.focus-visible:focus {
-  opacity: 0.65;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .feedback {
@@ -2838,7 +2837,7 @@ button,
     line-height: 30px;
   }
 
-  .services__item-button {
+  .services__item-icon {
     width: 40px;
     height: 40px;
   }
@@ -3140,14 +3139,13 @@ button,
     transition: ease;
   }
 
-  .services__item-wrapper:hover:not(.focus-visible) .services__image-background {
-    opacity: 0.65;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
+  .services__item-wrapper:hover:not(.focus-visible) {
+    min-width: 100%;
+    min-height: 100%;
   }
 
-  .services__item-button:hover:not(.focus-visible) {
+  .services__item-wrapper:hover:not(.focus-visible) .services__image-background,
+  .services__item-wrapper:hover:not(.focus-visible) .services__item-icon {
     opacity: 0.65;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;

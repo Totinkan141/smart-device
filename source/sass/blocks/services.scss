@@ -12,9 +12,14 @@
 .services__item-wrapper {
   display: block;
   color: inherit;
+  padding: 47px 40px 60px;
 
   @include hover-focus {
-    .services__image-background {
+    min-width: 100%;
+    min-height: 100%;
+
+    .services__image-background,
+    .services__item-icon {
       opacity: 0.65;
       transition: $trans-default;
     }
@@ -88,8 +93,6 @@
 }
 
 .services__item {
-  padding: 47px 40px 60px;
-
   position: relative;
 
   max-width: 350px;
@@ -168,7 +171,7 @@
   }
 }
 
-.services__item-button {
+.services__item-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,10 +190,10 @@
 
   background-color: $color-blue;
 
-  @include hover-focus {
-    opacity: 0.65;
-    transition: $trans-default;
-  }
+  // @include hover-focus {
+  //   opacity: 0.65;
+  //   transition: $trans-default;
+  // }
 
   @include vp-767 {
     width: 40px;
