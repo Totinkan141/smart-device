@@ -185,6 +185,11 @@
       &::placeholder {
         color: inherit;
       }
+
+      &:-webkit-autofill {
+        box-shadow: 0 0 0 50px inherit inset;
+        -webkit-text-fill-color: inherit;
+      }
     }
 
     input {
@@ -192,6 +197,13 @@
 
       &:valid {
         border-color: $color-success;
+      }
+
+      &:-webkit-autofill {
+        font-size: inherit;
+        -webkit-text-fill-color: rgba($color-secondary-white, 0.8);
+        box-shadow: 0 0 0 1000px  rgba($color-default-black, 0.15) inset;
+        transition: background-color 5000s ease-in-out 0s;
       }
     }
 

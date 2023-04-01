@@ -1985,12 +1985,28 @@ button,
   color: inherit;
 }
 
+.feedback__content form input:-webkit-autofill,
+.feedback__content form textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px inherit inset;
+  box-shadow: 0 0 0 50px inherit inset;
+  -webkit-text-fill-color: inherit;
+}
+
 .feedback__content form input {
   padding: 9px 12px;
 }
 
 .feedback__content form input:valid {
   border-color: #22b259;
+}
+
+.feedback__content form input:-webkit-autofill {
+  font-size: inherit;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 0 1000px rgba(4, 24, 39, 0.15) inset;
+  box-shadow: 0 0 0 1000px rgba(4, 24, 39, 0.15) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .feedback__content form textarea {
