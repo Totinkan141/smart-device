@@ -1373,7 +1373,7 @@ button,
   max-width: 480px;
   width: 100%;
   margin: 0;
-  padding: 0 12px 0 8px;
+  padding: 0 0 0 8px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1391,10 +1391,13 @@ button,
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
 }
 
 .main-nav__item {
-  max-width: 225px;
+  min-width: 220px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
