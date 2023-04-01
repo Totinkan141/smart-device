@@ -1343,6 +1343,11 @@ button,
   border-radius: 3px;
 }
 
+.header__btn.focus-visible:focus {
+  color: #f2f5f6;
+  border-color: #00b2ff;
+}
+
 .logo {
   display: block;
   max-width: 215px;
@@ -3101,6 +3106,11 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .header__btn:hover:not(.focus-visible) {
+    color: #f2f5f6;
+    border-color: #00b2ff;
   }
 
   .logo:hover:not(.focus-visible) {
