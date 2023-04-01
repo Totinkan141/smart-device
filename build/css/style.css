@@ -2347,9 +2347,6 @@ button,
 .accordion__content-list--site-sections {
   -ms-grid-columns: (220px)[2];
   grid-template-columns: repeat(2, 220px);
-  -ms-grid-rows: (auto)[4];
-  grid-template-rows: repeat(4, auto);
-  grid-auto-flow: column;
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
