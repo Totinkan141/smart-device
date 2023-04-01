@@ -111,7 +111,7 @@
 
   input:checked + .custom-toggle__icon {
     &::before {
-      background-image: url("../../img/svg/checkbox-checked.svg");
+      background-image: url("../img/svg/checkbox-checked.svg");
     }
   }
 

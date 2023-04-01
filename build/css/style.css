@@ -396,7 +396,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: local("Roboto Condensed"), url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: local("Roboto Condensed"), url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -404,7 +404,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: local("Roboto Condensed"), url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: local("Roboto Condensed"), url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -412,7 +412,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: local("PT Mono"), url("../../fonts/ptmono.woff2") format("woff2"), url("../../fonts/ptmono.woff") format("woff");
+  src: local("PT Mono"), url("../fonts/ptmono.woff2") format("woff2"), url("../fonts/ptmono.woff") format("woff");
 }
 
 *,
@@ -648,6 +648,10 @@ button,
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   color: #f2f5f6;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -762,6 +766,7 @@ button,
 }
 
 .modal.is-active {
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -979,7 +984,7 @@ button,
 }
 
 .custom-toggle input:checked + .custom-toggle__icon::before {
-  background-image: url("../../img/svg/checkbox-checked.svg");
+  background-image: url("../img/svg/checkbox-checked.svg");
 }
 
 .custom-toggle.is-invalid label span {
@@ -1338,6 +1343,11 @@ button,
   border-radius: 3px;
 }
 
+.header__btn.focus-visible:focus {
+  color: #f2f5f6;
+  border-color: #00b2ff;
+}
+
 .logo {
   display: block;
   max-width: 215px;
@@ -1463,6 +1473,10 @@ button,
   max-width: 100%;
   width: 100%;
   height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
   background-color: #041827;
   position: absolute;
   top: 0;
@@ -1709,9 +1723,16 @@ button,
 .services__item-wrapper {
   display: block;
   color: inherit;
+  padding: 47px 40px 60px;
 }
 
-.services__item-wrapper.focus-visible:focus .services__image-background {
+.services__item-wrapper.focus-visible:focus {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.services__item-wrapper.focus-visible:focus .services__image-background,
+.services__item-wrapper.focus-visible:focus .services__item-icon {
   opacity: 0.65;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
@@ -1748,7 +1769,6 @@ button,
 }
 
 .services__item {
-  padding: 47px 40px 60px;
   position: relative;
   max-width: 350px;
   width: 100%;
@@ -1797,7 +1817,7 @@ button,
   line-height: 30px;
 }
 
-.services__item-button {
+.services__item-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1816,13 +1836,6 @@ button,
   right: 0;
   bottom: 0;
   background-color: #00b2ff;
-}
-
-.services__item-button.focus-visible:focus {
-  opacity: 0.65;
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
 }
 
 .feedback {
@@ -1858,8 +1871,6 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0 30px 0 20px;
 }
 
@@ -1909,6 +1920,10 @@ button,
 
 .feedback__agree-checkbox {
   max-width: 100%;
+}
+
+.feedback__agree-checkbox label.focus-visible:focus .feedback__agree-icon {
+  border-color: rgba(4, 24, 39, 0.65);
 }
 
 .feedback__agree-icon {
@@ -1970,12 +1985,28 @@ button,
   color: inherit;
 }
 
+.feedback__content form input:-webkit-autofill,
+.feedback__content form textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px inherit inset;
+  box-shadow: 0 0 0 50px inherit inset;
+  -webkit-text-fill-color: inherit;
+}
+
 .feedback__content form input {
   padding: 9px 12px;
 }
 
 .feedback__content form input:valid {
   border-color: #22b259;
+}
+
+.feedback__content form input:-webkit-autofill {
+  font-size: inherit;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 0 1000px rgba(4, 24, 39, 0.15) inset;
+  box-shadow: 0 0 0 1000px rgba(4, 24, 39, 0.15) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .feedback__content form textarea {
@@ -1991,8 +2022,8 @@ button,
   padding-top: 14px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(235px, 275px))[2];
-  grid-template-columns: repeat(2, minmax(235px, 275px));
+  -ms-grid-columns: minmax(235px, 275px) minmax(235px, 275px);
+  grid-template-columns: minmax(235px, 275px) minmax(235px, 275px);
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
@@ -2009,6 +2040,9 @@ button,
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   padding: 12px 11px 9px;
   cursor: pointer;
   -webkit-transition: 0.3s ease;
@@ -2044,6 +2078,9 @@ button,
 
 .feedback__content form .feedback__agree .custom-toggle--checkbox {
   padding: 14px 0 0;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
 }
 
 .feedback__content form .feedback__agree .custom-toggle--checkbox input.focus-visible ~ .feedback__agree-icon {
@@ -2126,6 +2163,9 @@ button,
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   max-width: 100%;
   width: 100%;
 }
@@ -2450,6 +2490,13 @@ button,
     padding: 199px 0 205px;
   }
 
+  .main-intro__hero {
+    -o-object-position: -140px;
+    object-position: -140px;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
   .main-intro__title {
     margin: 0;
     font-size: 64px;
@@ -2560,7 +2607,7 @@ button,
   .feedback__content form .feedback__agree button {
     padding: 16px 11px 9px;
     margin: 0;
-    max-width: 265px;
+    min-width: 100%;
   }
 
   .feedback__content form .feedback__agree .custom-toggle--checkbox {
@@ -2689,7 +2736,6 @@ button,
   }
 
   .main-intro__hero img {
-    min-width: 1220px;
     -o-object-position: -244px;
     object-position: -244px;
   }
@@ -2728,9 +2774,9 @@ button,
   }
 
   .advantages__list {
-    -ms-grid-columns: minmax(270px, 595px);
-    grid-template-columns: minmax(270px, 595px);
-    max-width: 595px;
+    -ms-grid-columns: minmax(270px, 1fr);
+    grid-template-columns: minmax(270px, 1fr);
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -2812,7 +2858,7 @@ button,
     line-height: 30px;
   }
 
-  .services__item-button {
+  .services__item-icon {
     width: 40px;
     height: 40px;
   }
@@ -2859,10 +2905,6 @@ button,
     grid-column: 1/2;
     -ms-grid-columns: (minmax(270px, 1fr))[1];
     grid-template-columns: repeat(1, minmax(270px, 1fr));
-  }
-
-  .feedback__content form .feedback__agree button {
-    max-width: 270px;
   }
 
   .feedback__content form .feedback__agree .custom-toggle--checkbox {
@@ -3082,6 +3124,11 @@ button,
     background-color: rgba(0, 0, 0, 0.4);
   }
 
+  .header__btn:hover:not(.focus-visible) {
+    color: #f2f5f6;
+    border-color: #00b2ff;
+  }
+
   .logo:hover:not(.focus-visible) {
     opacity: 0.65;
     -webkit-transition: 0.3s ease;
@@ -3118,18 +3165,21 @@ button,
     transition: ease;
   }
 
-  .services__item-wrapper:hover:not(.focus-visible) .services__image-background {
+  .services__item-wrapper:hover:not(.focus-visible) {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .services__item-wrapper:hover:not(.focus-visible) .services__image-background,
+  .services__item-wrapper:hover:not(.focus-visible) .services__item-icon {
     opacity: 0.65;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
 
-  .services__item-button:hover:not(.focus-visible) {
-    opacity: 0.65;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
+  .feedback__agree-checkbox label:hover:not(.focus-visible) .feedback__agree-icon {
+    border-color: rgba(4, 24, 39, 0.65);
   }
 
   .feedback__content form .feedback__agree button:hover:not(.focus-visible) {

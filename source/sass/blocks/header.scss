@@ -61,6 +61,11 @@
   @include vp-1023 {
     display: none;
   }
+
+  @include hover-focus {
+    color: $color-default-white;
+    border-color: $color-blue;
+  }
 }
 
 .header__logo {

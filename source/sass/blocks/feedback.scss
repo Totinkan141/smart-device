@@ -32,7 +32,6 @@
   flex-direction: row;
   gap: 10px;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   padding: 0 30px 0 20px;
 
@@ -125,6 +124,14 @@
   max-width: 100%;
 }
 
+.feedback__agree-checkbox label {
+  @include hover-focus {
+    .feedback__agree-icon {
+      border-color: rgba($color-default-black, 0.65);
+    }
+  }
+}
+
 .feedback__agree-icon {
   top: 8px;
   left: 16px;
@@ -178,6 +185,11 @@
       &::placeholder {
         color: inherit;
       }
+
+      &:-webkit-autofill {
+        box-shadow: 0 0 0 50px inherit inset;
+        -webkit-text-fill-color: inherit;
+      }
     }
 
     input {
@@ -185,6 +197,13 @@
 
       &:valid {
         border-color: $color-success;
+      }
+
+      &:-webkit-autofill {
+        font-size: inherit;
+        -webkit-text-fill-color: rgba($color-secondary-white, 0.8);
+        box-shadow: 0 0 0 1000px  rgba($color-default-black, 0.15) inset;
+        transition: background-color 5000s ease-in-out 0s;
       }
     }
 
@@ -204,7 +223,7 @@
       padding-top: 14px;
 
       display: grid;
-      grid-template-columns: repeat(2, minmax(235px, 275px));
+      grid-template-columns: minmax(235px, 275px) minmax(235px, 275px);
       column-gap: 30px;
 
       @include vp-1023 {
@@ -226,6 +245,7 @@
 
         margin-right: 10px;
         grid-column: 1 / 2;
+        grid-row: 1 / 2;
         padding: 12px 11px 9px;
 
         cursor: pointer;
@@ -262,17 +282,13 @@
         @include vp-1023 {
           padding: 16px 11px 9px;
           margin: 0;
-
-          max-width: 265px;
-        }
-
-        @include vp-767 {
-          max-width: 270px;
+          min-width: 100%;
         }
       }
 
       .custom-toggle--checkbox {
         padding: 14px 0 0;
+        grid-column: 2 / 3;
 
         @include vp-1023 {
           padding: 8px 0 0;
@@ -379,6 +395,7 @@
 
       button {
         grid-column: 1 / 2;
+        grid-row: 1 / 2;
         max-width: 100%;
         width: 100%;
       }
