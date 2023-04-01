@@ -53,9 +53,11 @@
       <h1 class="visually-hidden">Компания Smart Device поставляет электронные Комплектующие.</h1>
       <section class="main-intro main__intro">
         <picture class="main-intro__hero">
-          <source media="(min-width: 320px)" type="image/webp" srcset="img/main-intro/hero@1x.webp 1x, img/main-intro/hero@2x.webp 2x ">
-          <source media="(min-width: 320px)" srcset="img/main-intro/hero@1x.jpg 1x, img/main-intro/hero@2x.jpg 2x">
-          <img src="img/main-intro/hero@1x.jpg" alt="Материская плата." width="1920" height="880">
+          <source media="(max-width: 767px)" type="image/webp" srcset="img/main-intro/mobile-tablet/hero@1x.webp 1x, img/main-intro/mobile-tablet/hero@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/main-intro/mobile-tablet/hero@1x.jpg 1x, img/main-intro/mobile-tablet/hero@2x.jpg 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/main-intro/desktop/hero@1x.webp 1x, img/main-intro/desktop/hero@2x.webp 2x ">
+          <source media="(min-width: 768px)" srcset="img/main-intro/desktop/hero@1x.jpg 1x, img/main-intro/desktop/hero@2x.jpg 2x">
+          <img src="img/main-intro/desktop/hero@1x.jpg" loading="eager" alt="Материская плата." width="1920" height="880">
         </picture>
         <div class="container main-intro__inner">
           <h2 class="main-intro__title">Печатные платы</h2>
@@ -114,9 +116,9 @@
         <div class="container about-company__inner">
           <div class="about-company__year-block">
             <picture>
-              <source media="(min-width: 767px)" srcset="img/about-company/year-bg@1x.webp 1x, img/about-company/year-bg@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 767px)" srcset="img/about-company/year-bg@1x.jpg 1x, img/about-company/year-bg@2x.jpg 2x">
-              <img src="img/about-company/year-bg@1x.jpg" alt="2022 год." class="about-company__year-image" width="150"
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/about-company/year-bg@1x.webp 1x, img/about-company/year-bg@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/about-company/year-bg@1x.jpg 1x, img/about-company/year-bg@2x.jpg 2x">
+              <img src="img/about-company/year-bg@1x.jpg" loading="lazy" alt="2022 год." class="about-company__year-image" width="150"
               height="320">
             </picture>
             <p class="about-company__year-text">2022</p>
@@ -166,7 +168,7 @@
                   <source media="(max-width: 374px)" srcset="img/products/mobile/card-bg-1@1x.jpg 1x, img/products/mobile/card-bg-1@2x.jpg 2x ">
                   <source media="(max-width: 1023px)" srcset="img/products/tablet/card-bg-1@1x.jpg 1x, img/products/tablet/card-bg-1@2x.jpg 2x ">
                   <source media="(min-width: 1024px)" srcset="img/products/desktop/card-bg-1@1x.jpg 1x, img/products/desktop/card-bg-1@2x.jpg 2x ">
-                  <img src="img/products/desktop/card-bg-1@1x.jpg" alt="Производство печатныx плат." width="350" height="650">
+                  <img src="img/products/desktop/card-bg-1@1x.jpg" loading="lazy" alt="Производство печатныx плат." width="350" height="650">
                 </picture>
                 <h3 class="services__name">Производство печатныx плат</h3>
                 <button class="btn services__item-button">
@@ -186,7 +188,7 @@
                   <source media="(max-width: 374px)" srcset="img/products/mobile/card-bg-2@1x.jpg 1x, img/products/mobile/card-bg-2@2x.jpg 2x ">
                   <source media="(max-width: 1023px)" srcset="img/products/tablet/card-bg-2@1x.jpg 1x, img/products/tablet/card-bg-2@2x.jpg 2x ">
                   <source media="(min-width: 1024px)" srcset="img/products/desktop/card-bg-2@1x.jpg 1x, img/products/desktop/card-bg-2@2x.jpg 2x ">
-                  <img src="img/products/desktop/card-bg-2@1x.jpg" alt="Монтаж печатных плат." width="350" height="650">
+                  <img src="img/products/desktop/card-bg-2@1x.jpg"  loading="lazy" alt="Монтаж печатных плат." width="350" height="650">
                 </picture>
                 <h3 class="services__name">Монтаж печатных плат</h3>
                 <button class="btn services__item-button">
@@ -206,7 +208,7 @@
                   <source media="(max-width: 374px)" srcset="img/products/mobile/card-bg-3@1x.jpg 1x, img/products/mobile/card-bg-3@2x.jpg 2x ">
                   <source media="(max-width: 1023px)" srcset="img/products/tablet/card-bg-3@1x.jpg 1x, img/products/tablet/card-bg3@2x.jpg 2x ">
                   <source media="(min-width: 1024px)" srcset="img/products/desktop/card-bg-3@1x.jpg 1x, img/products/desktop/card-bg-3@2x.jpg 2x ">
-                  <img src="img/products/desktop/card-bg-3@2x.jpg" alt="Комплектующие для светотехники." width="350" height="650">
+                  <img src="img/products/desktop/card-bg-3@2x.jpg" loading="lazy" alt="Комплектующие для светотехники." width="350" height="650">
                 </picture>
                 <h3 class="services__name">Комплектующие для&nbsp;светотехники</h3>
                 <a href="#catalog.html" class="btn services__item-button">
@@ -226,7 +228,7 @@
           <picture class="feedback__image">
             <source media="(min-width: 1024px)" type="image/webp" srcset="img/feedback/paper-airplane@1x.webp 1x, img/feedback/paper-airplane@2x.webp 2x">
             <source media="(min-width: 1024px)" srcset="img/feedback/paper-airplane@1x.png 1x, img/feedback/paper-airplane@2x.png 2x">
-            <img src="img/feedback/paper-airplane@1x.png" width="510" height="285" alt="Картинка бумажного самолётика.">
+            <img src="img/feedback/paper-airplane@1x.png" loading="lazy" width="510" height="285" alt="Картинка бумажного самолётика.">
           </picture>
 
           <div class="feedback__content">
@@ -278,7 +280,7 @@
       <div class="container footer__inner">
         <div class="footer__contact">
           <a href="index.html" class="logo footer__logo">
-            <img src="img/svg/logo.svg" width="215" height="55" alt="Smart Device">
+            <img src="img/svg/logo.svg"  loading="lazy" width="215" height="55" alt="Smart Device">
           </a>
           <ul class="social footer__social">
             <li class="social__item">
@@ -394,20 +396,6 @@
         <button class="modal__close-btn feedback__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
           <svg width="20" height="20">
             <use xlink:href="img/sprite.svg#icon-close-modal"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от&nbsp;ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
           </svg>
         </button>
       </div>

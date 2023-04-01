@@ -30,6 +30,7 @@
   width: 100%;
   height: 100%;
 
+
   background-color: $color-default-black;
 
   position: absolute;
@@ -64,6 +65,7 @@
     min-height: 100%;
 
     object-fit: cover;
+    background-size: cover;
   }
 
   @include vp-767 {
