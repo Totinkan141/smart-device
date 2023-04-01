@@ -2249,6 +2249,7 @@ button,
 }
 
 .social {
+  max-width: 205px;
   padding: 0;
   list-style: none;
   display: -webkit-box;
