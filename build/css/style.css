@@ -1391,9 +1391,6 @@ button,
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
 }
 
 .main-nav__item {
@@ -2449,6 +2446,10 @@ button,
     min-height: 100px;
   }
 
+  .header__inner {
+    max-width: 100vw;
+  }
+
   .header__btn {
     display: none;
   }
@@ -2466,6 +2467,15 @@ button,
     max-width: -moz-max-content;
     max-width: max-content;
     margin-left: auto;
+  }
+
+  .main-nav__item {
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .main-nav__link {
@@ -2717,9 +2727,9 @@ button,
   }
 
   .main-nav__list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
   }
 
   .main {

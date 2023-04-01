@@ -26,7 +26,6 @@
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 20px;
-  column-count: 2;
 
   @include vp-1023 {
     padding: 0;
@@ -35,13 +34,18 @@
   }
 
   @include vp-767 {
-    justify-content: center;
+    column-gap: 10px;
   }
 }
 
 .main-nav__item {
   min-width: 220px;
   width: max-content;
+
+  @include vp-1023 {
+    min-width: min-content;
+    width: fit-content;
+  }
 }
 
 .main-nav__link {
