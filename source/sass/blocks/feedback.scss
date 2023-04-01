@@ -296,6 +296,7 @@
 
         @include vp-767 {
           padding: 25px 0 0;
+          grid-column: 1 / 2;
         }
 
         input.focus-visible ~ .feedback__agree-icon {

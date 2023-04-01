@@ -1475,8 +1475,6 @@ button,
   height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
-  -o-object-position: center;
-  object-position: center;
   background-color: #041827;
   position: absolute;
   top: 0;
@@ -1505,7 +1503,7 @@ button,
   width: 100%;
   min-width: 1920px;
   max-height: 100%;
-  height: auto;
+  height: 100%;
   min-height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
@@ -2513,11 +2511,11 @@ button,
     padding: 199px 0 205px;
   }
 
-  .main-intro__hero {
-    -o-object-position: -140px;
-    object-position: -140px;
-    -o-object-fit: contain;
-    object-fit: contain;
+  .main-intro__hero img {
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+    -o-object-position: -140px 4px;
+    object-position: -140px 4px;
   }
 
   .main-intro__title {
@@ -2574,6 +2572,10 @@ button,
     margin: -3px 0 0;
   }
 
+  .services__item-wrapper {
+    padding: 37px 60px 60px 45px;
+  }
+
   .services__title {
     margin: 0 0 38px;
   }
@@ -2586,7 +2588,6 @@ button,
   }
 
   .services__item {
-    padding: 37px 60px 60px 45px;
     max-width: 100%;
     min-height: 250px;
   }
@@ -2759,8 +2760,12 @@ button,
   }
 
   .main-intro__hero img {
-    -o-object-position: -244px;
-    object-position: -244px;
+    min-width: 880px;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: -180px -80px;
+    object-position: -180px -80px;
   }
 
   .main-intro__title {
@@ -2857,6 +2862,10 @@ button,
     padding: 0 25px;
   }
 
+  .services__item-wrapper {
+    padding: 27px 40px 40px 29px;
+  }
+
   .services__title {
     margin: 0 0 29px;
     font-size: 28px;
@@ -2872,7 +2881,6 @@ button,
   }
 
   .services__item {
-    padding: 27px 40px 40px 29px;
     min-width: 270px;
   }
 
@@ -2932,6 +2940,9 @@ button,
 
   .feedback__content form .feedback__agree .custom-toggle--checkbox {
     padding: 25px 0 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
 
   .feedback__content form .feedback__agree .custom-toggle--checkbox .feedback__agree-icon {
@@ -3131,6 +3142,14 @@ button,
     min-width: 35px;
     max-width: 35px;
     max-height: 35px;
+  }
+
+  .main-intro__hero img {
+    min-width: 770px;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+    -o-object-position: -140px;
+    object-position: -140px;
   }
 }
 
