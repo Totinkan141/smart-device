@@ -6,11 +6,14 @@
   gap: 30px;
 
   @include vp-1023 {
-    grid-template-columns: 220px 1fr;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
     gap: 130px;
   }
 
   @include vp-767 {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 0;
   }
