@@ -2241,8 +2241,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .footer__contact {
@@ -2712,8 +2710,13 @@ button,
   }
 
   .accordion {
-    -ms-grid-columns: 220px 1fr;
-    grid-template-columns: 220px 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 100%;
     gap: 130px;
   }
 
@@ -3050,6 +3053,8 @@ button,
   }
 
   .accordion {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 0;
