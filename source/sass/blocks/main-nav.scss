@@ -18,7 +18,7 @@
   max-width: 480px;
   width: 100%;
   margin: 0;
-  padding: 0 12px 0 8px;
+  padding: 0 0 0 8px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -34,13 +34,18 @@
   }
 
   @include vp-767 {
-    justify-content: center;
+    column-gap: 10px;
   }
 }
 
 .main-nav__item {
-  max-width: 225px;
+  min-width: 220px;
   width: max-content;
+
+  @include vp-1023 {
+    min-width: min-content;
+    width: fit-content;
+  }
 }
 
 .main-nav__link {
