@@ -76,7 +76,7 @@
       min-width: 880px;
       height: auto;
       object-fit: cover;
-      object-position: -180px -80px;
+      object-position: -110px -80px;
     }
 
     @include vp-374 {
@@ -85,7 +85,6 @@
       object-position: -140px;
     }
   }
-
 }
 
 .main-intro__title {

@@ -126,9 +126,7 @@
 
 .services__image-background {
   z-index: -1;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
 
   background-color: rgba($color-blue, 0.25);
 
@@ -154,9 +152,62 @@
     background: rgba(4, 24, 39, 0.5);
   }
 
-  img {
-    width: 100%;
-    height: 100%;
+  .services__image {
+    position: absolute;
+
+    max-width: 1920px;
+    width: max-content;
+    max-height: max-content;
+    display: block;
+    top: -120px;
+
+    &--first {
+      right: -954px;
+    }
+
+    &--second {
+      right: -604px;
+    }
+
+    &--third {
+      right: -254px;
+    }
+
+    @include vp-1023 {
+      &--first {
+        top: -550px;
+        right: -570px;
+      }
+
+      &--second {
+        top: -320px;
+        right: -200px;
+      }
+
+      &--third {
+        top: -360px;
+        left: -140px;
+        right: 0;
+      }
+    }
+
+    @include vp-767 {
+      &--first {
+        top: -300px;
+        left: -370px;
+      }
+
+      &--second {
+        top: -535px;
+        left: -370px;
+      }
+
+      &--third {
+        top: -395px;
+        left: auto;
+        right: -335px;
+      }
+    }
   }
 }
 
@@ -193,11 +244,6 @@
   bottom: 0;
 
   background-color: $color-blue;
-
-  // @include hover-focus {
-  //   opacity: 0.65;
-  //   transition: $trans-default;
-  // }
 
   @include vp-767 {
     width: 40px;

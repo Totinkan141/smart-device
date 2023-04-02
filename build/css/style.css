@@ -1789,9 +1789,7 @@ button,
 
 .services__image-background {
   z-index: -1;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
   background-color: rgba(0, 178, 255, 0.25);
   position: absolute;
   top: 0;
@@ -1813,9 +1811,29 @@ button,
   background: rgba(4, 24, 39, 0.5);
 }
 
-.services__image-background img {
-  width: 100%;
-  height: 100%;
+.services__image-background .services__image {
+  position: absolute;
+  max-width: 1920px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  display: block;
+  top: -120px;
+}
+
+.services__image-background .services__image--first {
+  right: -954px;
+}
+
+.services__image-background .services__image--second {
+  right: -604px;
+}
+
+.services__image-background .services__image--third {
+  right: -254px;
 }
 
 .services__name {
@@ -2592,6 +2610,22 @@ button,
     min-height: 250px;
   }
 
+  .services__image-background .services__image--first {
+    top: -550px;
+    right: -570px;
+  }
+
+  .services__image-background .services__image--second {
+    top: -320px;
+    right: -200px;
+  }
+
+  .services__image-background .services__image--third {
+    top: -360px;
+    left: -140px;
+    right: 0;
+  }
+
   .feedback::before {
     content: none;
   }
@@ -2764,8 +2798,8 @@ button,
     height: auto;
     -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: -180px -80px;
-    object-position: -180px -80px;
+    -o-object-position: -110px -80px;
+    object-position: -110px -80px;
   }
 
   .main-intro__title {
@@ -2882,6 +2916,22 @@ button,
 
   .services__item {
     min-width: 270px;
+  }
+
+  .services__image-background .services__image--first {
+    top: -300px;
+    left: -370px;
+  }
+
+  .services__image-background .services__image--second {
+    top: -535px;
+    left: -370px;
+  }
+
+  .services__image-background .services__image--third {
+    top: -395px;
+    left: auto;
+    right: -335px;
   }
 
   .services__name {
