@@ -682,7 +682,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(4, 24, 39, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -766,7 +766,6 @@ button,
 }
 
 .modal.is-active {
-  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);

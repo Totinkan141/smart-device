@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $color-overlay;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -108,7 +108,6 @@
   }
 
   &.is-active {
-    background-color: $color-overlay;
     transform: scale(1);
     visibility: visible;
     opacity: 1;
