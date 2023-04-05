@@ -6,6 +6,10 @@
   padding: 0 20px;
   max-width: 1262px;
 
+  @include vp-1023 {
+    padding: 0 46px;
+  }
+
   @include vp-767 {
     padding: 0 25px;
   }
@@ -17,12 +21,12 @@
 
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, minmax(320px, 596px));
+  grid-template-columns: repeat(2, minmax(270px, 596px));
   column-gap: 33px;
   row-gap: 30px;
 
   @include vp-1023 {
-    column-gap: 30px;
+    column-gap: 24px;
   }
 
   @include vp-767 {
@@ -65,9 +69,13 @@
   }
 
   @include vp-767 {
-    padding: 27px 30px 61px 25px;
+    padding: 27px 30px 52px 25px;
 
-    min-height: 325px;
+    min-height: 340px;
+
+    &:nth-child(n + 3) {
+      min-height: 325px;
+    }
   }
 }
 
