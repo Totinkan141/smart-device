@@ -2754,7 +2754,7 @@ button,
   }
 
   .header__inner {
-    padding: 0 16px 0 20px;
+    padding: 0 26px;
   }
 
   .header__logo {
@@ -2763,12 +2763,6 @@ button,
 
   .main-nav {
     margin: 0 9px;
-  }
-
-  .main-nav__list {
-    -webkit-column-gap: 10px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
   }
 
   .main {

@@ -32,10 +32,6 @@
     max-width: max-content;
     margin-left: auto;
   }
-
-  @include vp-767 {
-    column-gap: 10px;
-  }
 }
 
 .main-nav__item {
