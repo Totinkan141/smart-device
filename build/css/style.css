@@ -1769,8 +1769,8 @@ button,
   width: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(325px, 350px))[3];
-  grid-template-columns: repeat(3, minmax(325px, 350px));
+  -ms-grid-columns: (minmax(270px, 350px))[3];
+  grid-template-columns: repeat(3, minmax(270px, 350px));
   -webkit-column-gap: 85px;
   -moz-column-gap: 85px;
   column-gap: 85px;
@@ -1781,7 +1781,7 @@ button,
   position: relative;
   max-width: 350px;
   width: 100%;
-  min-width: 310px;
+  min-width: 270px;
   min-height: 650px;
   z-index: 0;
 }
@@ -2435,13 +2435,6 @@ button,
 */
 
 @media (max-width: 1279px) {
-  .services__list {
-    max-width: 800px;
-    margin: 0 auto;
-    -ms-grid-columns: (350px)[2];
-    grid-template-columns: repeat(2, 350px);
-  }
-
   .services__item {
     max-width: 400px;
   }
@@ -2675,6 +2668,10 @@ button,
     padding: 16px 11px 9px;
     margin: 0;
     max-width: 265px;
+  }
+
+  .feedback__content form .feedback__agree button {
+    max-width: 100%;
   }
 
   .feedback__content form .feedback__agree .custom-toggle--checkbox {
