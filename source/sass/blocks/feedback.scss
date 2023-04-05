@@ -249,6 +249,7 @@
         padding: 12px 11px 9px;
 
         cursor: pointer;
+        user-select: none;
         transition: $trans-default;
 
         font-family: $ff-roboto-condensed;
