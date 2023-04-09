@@ -211,13 +211,14 @@
       max-width: 100%;
       min-height: 155px;
 
-      padding: 24px 12px 9px;
+      padding: 22px 12px 9px;
 
       @include vp-1023 {
         padding: 30px 12px 9px;
       }
 
       @include vp-767 {
+        padding: 24px 12px 9px;
         min-height: 180px;
       }
     }
@@ -290,7 +291,7 @@
           max-width: 265px;
         }
 
-        @include vp-1023 {
+        @include vp-767 {
           max-width: 100%;
         }
       }
