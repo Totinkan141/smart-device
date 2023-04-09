@@ -2039,7 +2039,7 @@ button,
 .feedback__content form textarea {
   max-width: 100%;
   min-height: 155px;
-  padding: 24px 12px 9px;
+  padding: 22px 12px 9px;
 }
 
 .feedback__content form .feedback__agree {
@@ -2228,7 +2228,7 @@ button,
 }
 
 .footer {
-  padding: 50px 10px 55px;
+  padding: 50px 10px;
   background-color: #041827;
   color: #ffffff;
   min-width: -webkit-fit-content;
@@ -2322,12 +2322,11 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  row-gap: 24px;
 }
 
 .accordion__trigger {
   position: relative;
-  margin: 0;
+  margin: 0 0 24px;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -2352,23 +2351,29 @@ button,
   transform: rotate(90deg);
 }
 
-.accordion__content-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
+.accordion__site-sections {
   display: -ms-grid;
   display: grid;
-  row-gap: 8px;
-}
-
-.accordion__content-list--site-sections {
   -ms-grid-columns: (220px)[2];
   grid-template-columns: repeat(2, 220px);
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
+  row-gap: 8px;
   max-width: 450px;
+}
+
+.accordion__content-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  row-gap: 8px;
 }
 
 .accordion__inner-item {
@@ -2670,10 +2675,6 @@ button,
     max-width: 265px;
   }
 
-  .feedback__content form .feedback__agree button {
-    max-width: 100%;
-  }
-
   .feedback__content form .feedback__agree .custom-toggle--checkbox {
     padding: 8px 0 0;
   }
@@ -2728,7 +2729,7 @@ button,
     gap: 130px;
   }
 
-  .accordion__content-list--site-sections {
+  .accordion__site-sections {
     -ms-grid-columns: 220px;
     grid-template-columns: 220px;
     grid-auto-flow: row;
@@ -2985,6 +2986,7 @@ button,
   }
 
   .feedback__content form textarea {
+    padding: 24px 12px 9px;
     min-height: 180px;
   }
 
@@ -2995,6 +2997,10 @@ button,
     grid-column: 1/2;
     -ms-grid-columns: (minmax(270px, 1fr))[1];
     grid-template-columns: repeat(1, minmax(270px, 1fr));
+  }
+
+  .feedback__content form .feedback__agree button {
+    max-width: 100%;
   }
 
   .feedback__content form .feedback__agree .custom-toggle--checkbox {
@@ -3069,6 +3075,7 @@ button,
   .accordion__item {
     margin: 0;
     width: 100%;
+    height: auto;
   }
 
   .accordion__item:not(:last-of-type) {
@@ -3076,6 +3083,7 @@ button,
   }
 
   .accordion__trigger {
+    margin: 0;
     padding: 22px 25px 21px;
     width: 100%;
     cursor: pointer;
